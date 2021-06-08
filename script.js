@@ -12,12 +12,12 @@ By the end of the lab, there shouldn't be any question marks left on the report 
 
 
 const studentInformation = {
-  name: "FILL_IN_YOUR_NAME_HERE",
-  grade: "FILL_IN_YOUR_GRADE_HERE",
-  advisor: "FILL_IN_YOUR_ADVISOR_HERE",
-  major: "FILL_IN_YOUR_MAJOR_HERE",
-  graduationYear: "FILL_IN_YOUR_GRADUATION_YEAR_HERE",
-  imageUrl: "ADD_A_URL_TO_ANY_IMAGE_HERE",
+  name: "shayan",
+  grade: "soph",
+  advisor: "bob",
+  major: "cs",
+  graduationYear: "2023",
+  imageUrl: "http://sarn.xyz/images/avatar.jpg",
 }
 
 let semester = "Spring Semester"
