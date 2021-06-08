@@ -248,6 +248,22 @@ function updateDropdownLabel() {
   dropdownbutton.addEventListener('click', () => {
     toggleDropdown()
   })
+
+  fall.addEventListener('click', () => {
+    semester = 'Fall Semester'
+    updateReportCard()
+    toggleDropdown()
+  })
+  winter.addEventListener('click', () => {
+    semester = 'Winter Semester'
+    updateReportCard()
+    toggleDropdown()
+  })
+  spring.addEventListener('click', () => {
+    semester = 'Spring Semester'
+    updateReportCard()
+    toggleDropdown()
+  })
   
   
 }
