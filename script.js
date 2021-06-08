@@ -227,6 +227,16 @@ function updateReportCard() {
  */
 function toggleDropdown() {
   // code goes here
+  let drop = document.getElementsByClassName('dropdown')[0]
+  if(drop.classList.contains('closed')){
+    drop.classList.remove('closed')
+  }
+  else{
+    drop.classList.add('closed')
+  }
+
+  
+  
 }
 
 /**
@@ -235,6 +245,11 @@ function toggleDropdown() {
  */
 function updateDropdownLabel() {
   // code goes here
+  dropdownbutton.addEventListener('click', () => {
+    toggleDropdown()
+  })
+  
+  
 }
 
 // Add an event listener for the dropdown button that calls the toggleDropdown button
