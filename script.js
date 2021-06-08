@@ -8,6 +8,9 @@ Each function is annotated with a comment explaining what it should do.
 By the end of the lab, there shouldn't be any question marks left on the report card.
 */
 
+
+
+
 const studentInformation = {
   name: "FILL_IN_YOUR_NAME_HERE",
   grade: "FILL_IN_YOUR_GRADE_HERE",
@@ -74,11 +77,38 @@ const dropdownlabel = document.querySelector('.dropdown-label')
 
 const fall = document.querySelector('#fall-semester')
 const spring = document.querySelector('#spring-semester')
-const winter = document.querySelector('#winter-semester')
+const winter = document.querySelector('#winter-term')
 
 const reportCardTable = document.querySelector('#report-card-table')
 
 
+
+fall.addEventListener('click', () => {
+  semester = 'Fall Semester'
+  // console.log('a');
+  updateReportCard()
+  // console.log('b');
+  toggleDropdown()
+  // console.log('c');
+})
+winter.addEventListener('click', () => {
+  semester = 'Winter Term'
+  updateReportCard()
+  toggleDropdown()
+})
+spring.addEventListener('click', () => {
+
+  // console.log('hi');
+
+  semester = 'Spring Semester'
+  updateReportCard()
+  toggleDropdown()
+
+})
+dropdownbutton.addEventListener('click', () => {
+  console.log('hi');
+  toggleDropdown()
+})
 
 
 
@@ -234,36 +264,19 @@ function toggleDropdown() {
   else{
     drop.classList.add('closed')
   }
-
-  
-  
 }
-
 /**
  * This function should update the inner html of the dropdown label to be the current
  * value stored in the `semester` variable.
  */
 function updateDropdownLabel() {
-  // code goes here
-  dropdownbutton.addEventListener('click', () => {
-    toggleDropdown()
-  })
 
-  fall.addEventListener('click', () => {
-    semester = 'Fall Semester'
-    updateReportCard()
-    toggleDropdown()
-  })
-  winter.addEventListener('click', () => {
-    semester = 'Winter Semester'
-    updateReportCard()
-    toggleDropdown()
-  })
-  spring.addEventListener('click', () => {
-    semester = 'Spring Semester'
-    updateReportCard()
-    toggleDropdown()
-  })
+  // code goes here
+  
+
+  
+  dropdownlabel.innerHTML = semester
+
   
   
 }
@@ -284,4 +297,7 @@ window.onload = function () {
   populateStudentInfo(studentInformation)
 
   updateReportCard()
+
+  
 }
+
