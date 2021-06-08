@@ -76,7 +76,7 @@ const fall = document.querySelector('#fall-semester')
 const spring = document.querySelector('#spring-semester')
 const winter = document.querySelector('#winter-semester')
 
-const reportcard = document.querySelector('#report-card-table')
+const reportCardTable = document.querySelector('#report-card-table')
 
 
 
@@ -161,7 +161,17 @@ function populateStudentInfo({ name, grade, advisor, major, graduationYear, imag
  */
 function addReportCardHeaders() {
   // update the code here
-  reportCardTable.innerHTML += ``
+  reportCardTable.innerHTML += `
+    <div class="table-header table-row">
+      <h4 class="code-col">Code</h4>
+      <h4 class="name-col">Name</h4>
+      <h4 class="sem-col">Semester</h4>
+      <h4 class="credits-col">Credits</h4>
+      <h4 class="letter-col">Letter</h4>
+    </div>
+  `
+
+  
 }
 
 /**
@@ -174,7 +184,13 @@ function addReportCardHeaders() {
 function addCourseRowToReportCard(course, rowNum) {
   // update the code here with information about the course passed to this function
   reportCardTable.innerHTML += `
-    
+    <div class="table-row"> 
+      <h4 class="code-col">${course.code}</h4>
+      <h4 class="name-col">${course.name}</h4>
+      <h4 class="sem-col">${course.semester}</h4>
+      <h4 class="credits-col">${course.credits}</h4>
+      <h4 class="letter-col">${course.grade}</h4>
+    </div>
   `
 }
 
@@ -184,11 +200,22 @@ function addCourseRowToReportCard(course, rowNum) {
  * It should call the other functions responsible for creating the necessary HTML
  */
 function updateReportCard() {
+
+  
+
+
+
   updateDropdownLabel()
   reportCardTable.innerHTML = ``
 
-  // add your code here
+  
 
+  // add your code here
+  addReportCardHeaders()
+  studentData[semester].forEach(element => {
+    addCourseRowToReportCard(element, 0)
+  });
+  
 
 }
 
@@ -224,4 +251,6 @@ window.onload = function () {
   // run your function here to make it execute as soon as the page loads
   
   populateStudentInfo(studentInformation)
+
+  updateReportCard()
 }
