@@ -60,6 +60,28 @@ const gpaPointsLookup = {
 const dropdown = document.querySelector(".dropdown")
 // ADD more query selectors here
 
+const sname = document.querySelector('#student-name')
+const sadvisor = document.querySelector('#student-advisor')
+
+const smajor = document.querySelector('#student-major')
+const sgrade = document.querySelector('#student-grade-level')
+const sgradyear = document.querySelector('#student-graduation-year')
+const simage = document.querySelector('#student-image')
+
+const semdropdown = document.querySelector('#semester-dropdown')
+const dropdownbutton = document.querySelector('#dropdown-button')
+const dropdownlabel = document.querySelector('#dropdown-label')
+
+const fall = document.querySelector('#fall-semester')
+const spring = document.querySelector('#spring-semester')
+const winter = document.querySelector('#winter-semester')
+
+const reportcard = document.querySelector('#report-card-table')
+
+
+
+
+
 /**
  * Modify the report card to display the correct grade level from the lookup table above.
  *
