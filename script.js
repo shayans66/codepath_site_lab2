@@ -68,9 +68,9 @@ const sgrade = document.querySelector('#student-grade-level')
 const sgradyear = document.querySelector('#student-graduation-year')
 const simage = document.querySelector('#student-image')
 
-const semdropdown = document.querySelector('#semester-dropdown')
-const dropdownbutton = document.querySelector('#dropdown-button')
-const dropdownlabel = document.querySelector('#dropdown-label')
+const semdropdown = document.querySelector('.semester-dropdown')
+const dropdownbutton = document.querySelector('.dropdown-button')
+const dropdownlabel = document.querySelector('.dropdown-label')
 
 const fall = document.querySelector('#fall-semester')
 const spring = document.querySelector('#spring-semester')
@@ -89,6 +89,8 @@ const reportcard = document.querySelector('#report-card-table')
  */
 function updateStudentName(studentName) {
   // code goes here
+  // console.log(sname);
+  sname.innerHTML = studentName
 }
 
 /**
@@ -98,6 +100,7 @@ function updateStudentName(studentName) {
  */
 function updateStudentGradeLevel(studentGradeLevel) {
   // code goes here
+  sgrade.innerHTML = studentGradeLevel
 }
 
 /**
@@ -107,6 +110,7 @@ function updateStudentGradeLevel(studentGradeLevel) {
  */
 function updateStudentAdvisor(studentAdvisor) {
   // code goes here
+  sadvisor.innerHTML = studentAdvisor
 }
 
 /**
@@ -116,6 +120,7 @@ function updateStudentAdvisor(studentAdvisor) {
  */
 function updateMajor(studentMajor) {
   // code goes here
+  smajor.innerHTML = studentMajor
 }
 
 /**
@@ -125,6 +130,7 @@ function updateMajor(studentMajor) {
  */
 function updateStudentGraduationYear(graduationyear) {
   // code goes here
+  sgradyear.innerHTML = graduationyear
 }
 
 /**
@@ -135,6 +141,7 @@ function updateStudentGraduationYear(graduationyear) {
  */
 function updateStudentImage(imageUrl) {
   // code goes here
+  simage.innerHTML = imageUrl
 }
 
 /**
@@ -213,5 +220,8 @@ function updateDropdownLabel() {
 * Add functions here to make it execute as soon as the page loads
 */
 window.onload = function () {
+
   // run your function here to make it execute as soon as the page loads
+  
+  populateStudentInfo(studentInformation)
 }
